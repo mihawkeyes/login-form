@@ -1,0 +1,35 @@
+@use "src/styles/_index" as *;
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    width: 250px;
+    padding: 5px;
+    
+    button{
+        width: 100%;
+        width: 100px;
+        border-radius: 5px;
+        background-color: $primary ;
+        border : 2px solid $secondary;
+        padding: 5px;
+    }
+    
+    button:hover{
+        cursor: pointer;
+        box-shadow: 0 0 1px 1px $secondary;
+        transform: scale(1.1);
+        transition: all ease-in-out 0.1s;
+    }
+    
+    button:active{
+        box-shadow: 0 0 1px 1px $fontcolor-secondary;
+        transform: scale(1);
+        background-color: rgba($fontcolor,0.25) ;
+        border : 2px solid $fontcolor-secondary;
+        color: $fontcolor-secondary;
+        transition: all ease-in-out 0.1s;
+    }
+}

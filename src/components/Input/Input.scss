@@ -1,0 +1,43 @@
+@use "src/styles/_index" as *;
+.input-container {
+  position: relative;
+  align-items: center;
+  width: 250px;
+  margin: 10px;
+  .input {
+    position: relative;
+    background-color: rgba($secondary,0.1);
+    border:none;
+    border-bottom: 2px solid rgba($dark, 0.5);
+    padding: 10px;
+    width: 90%;
+    // border-radius: 5px;
+    outline: none;
+    color: #fff;
+    font-size: 1rem;
+  }
+  .label {
+    position: absolute;
+    left: 0px;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 1rem;
+    color: rgba($fontcolor, 0.5);
+    text-transform: uppercase;
+    transition: 0.25s;
+  }
+}
+
+.input-container .input.active ~ .label, .input-container .input.valid ~ .label {
+  color: $fontcolor;
+  transform: translateX(10px) translateY(-7px);
+  font-size: 0.65rem;
+  padding: 0 10px;
+  background-color: $fontcolor-secondary;
+  border: none;
+  border-bottom: 1px solid $fontcolor-secondary;
+}
+
+.input-container .input.active , .input-container .input.valid  {
+  border-bottom: 1px solid $fontcolor-secondary;
+}
